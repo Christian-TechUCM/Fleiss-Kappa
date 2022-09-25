@@ -1,8 +1,6 @@
-from csv import excel
+import os
 import pandas as pd
 
-excel_file = '1.xlsx'
-
-df =pd.read_excel(excel_file)
-
-print(df.head(2))
+data = pd.read_excel (r'C:\Users\urbin\Documents\Code\COPUS-IRR\Testfiles\2.xlsx')
+df = pd.DataFrame(data, columns=['L','Ind','CG','WG','OG','AnQ','SQ','WC','Prd','SP','T/Q','W','O','Lec','RtW','FUp','PQ','CQ','AnQ','MG','1o1','D/V','Adm','W','O'])
+print (df)
