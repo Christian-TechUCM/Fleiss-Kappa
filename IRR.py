@@ -5,42 +5,65 @@ import krippendorff
 import numpy as np
 
 
-
 def SetWorkingDirectory():
     # Ask the user to set the working directory and save as char
     working_directory = input("Please enter the working directory: ")
     # Change the working directory to the one entered by the user
     os.chdir(working_directory)
 
-   # Set the working directory
-   # os.chdir(r'C:\Users\urbin\Documents\Code\COPUS-IRR\Testfiles')
-
 
 def ReadData():
-    # oop through the files in the working directory and read excel sheets into a dataframe using specified columns
-    #field = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
-    
-    for file in os.listdir():
-        if file.endswith(".xlsx"):
-            
-            #df = pd.read_excel(file,sheet_name='50 min class', usecols=field, skiprows=9)
-            df = pd.read_excel(file,sheet_name='RawData')
-            df.to_numpy()
-            print(df)
-    #loop that creates multiple data frams for each file
+    num = int(input("Please enter the number of judges: "))
+    print(num)
+
+    if num >= 1:
+        # create data frame from excel sheet
+        df1 = pd.read_excel("1.xlsx", sheet_name="RawData")
+        np_array1 = df1.to_numpy()
+
+        # print(np_array1)
+        # print(df1)
+        pass
+
+    if num >= 2:
+        # create data frame from excel sheet
+        df2 = pd.read_excel("2.xlsx", sheet_name="RawData")
+        np_array2 = df2.to_numpy()
+
+        print(np_array2)
+        print(df2)
+    if num >= 3:
+        # create data frame from excel sheet
+        df3 = pd.read_excel("3.xlsx", sheet_name="RawData")
+        print(df3)
+    if num >= 4:
+        # create data frame from excel sheet
+        df4 = pd.read_excel("4.xlsx", sheet_name="RawData")
+        print(df4)
+    if num >= 5:
+        # create data frame from excel sheet
+        df5 = pd.read_excel("5.xlsx", sheet_name="RawData")
+        print(df5)
+    if num >= 6:
+        # create data frame from excel sheet
+        df6 = pd.read_excel("6.xlsx", sheet_name="RawData")
+        print(df6)
+    if num >= 7:
+        # create data frame from excel sheet
+        df7 = pd.read_excel("7.xlsx", sheet_name="RawData")
+        print(df7)
+    if num >= 8:
+        # create data frame from excel sheet
+        df8 = pd.read_excel("8.xlsx", sheet_name="RawData")
+        print(df8)
 
 
-def krippendorff_alpha(data, level_of_measurement):
-    return krippendorff.alpha(data, level_of_measurement=level_of_measurement)
-    
-#
-
-# , usecols=fields ['L','Ind','CG','WG','OG','AnQ','SQ','WC','Prd','SP','T/Q','W','O','Lec','RtW','FUp','PQ','CQ','AnQ','MG','1o1','D/V','Adm','W','O']
 
 
 def main():
     SetWorkingDirectory()
     ReadData()
+    
 
 
 if __name__ == "__main__":
