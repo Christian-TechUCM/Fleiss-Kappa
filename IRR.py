@@ -20,10 +20,9 @@ def ReadData():
         # create data frame from excel sheet
         df1 = pd.read_excel("1.xlsx", sheet_name="RawData")
         np_array1 = df1.to_numpy()
-
-        # print(np_array1)
-        # print(df1)
-        pass
+    
+    print(np_array1)
+    # print(df1)
 
     if num >= 2:
         # create data frame from excel sheet
@@ -31,7 +30,7 @@ def ReadData():
         np_array2 = df2.to_numpy()
 
         print(np_array2)
-        print(df2)
+       # print(df2)
     if num >= 3:
         # create data frame from excel sheet
         df3 = pd.read_excel("3.xlsx", sheet_name="RawData")
@@ -56,14 +55,12 @@ def ReadData():
         # create data frame from excel sheet
         df8 = pd.read_excel("8.xlsx", sheet_name="RawData")
         print(df8)
-
-
-
+    print("Krippendorff's alpha for nominal metric: ", krippendorff.alpha(value_counts=[np_array1,np_array2],
+                                                                          level_of_measurement="nominal"))
 
 def main():
     SetWorkingDirectory()
     ReadData()
-    
 
 
 if __name__ == "__main__":
