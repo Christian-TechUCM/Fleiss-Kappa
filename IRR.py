@@ -18,13 +18,13 @@ def SetWorkingDirectory():
 
 def ReadData():
     # oop through the files in the working directory and read excel sheets into a dataframe using specified columns
-    field = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    #field = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
     
     for file in os.listdir():
         if file.endswith(".xlsx"):
             
-            df = pd.read_excel(file,sheet_name='50 min class', usecols=field, skiprows=9)
-            df = df.dropna()
+            #df = pd.read_excel(file,sheet_name='50 min class', usecols=field, skiprows=9)
+            df = pd.read_excel(file,sheet_name='RawData')
             df.to_numpy()
             print(df)
     #loop that creates multiple data frams for each file
