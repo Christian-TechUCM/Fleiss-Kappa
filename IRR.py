@@ -33,7 +33,7 @@ def ReadData():
 def krippendorff_alpha(data, level_of_measurement):
     return krippendorff.alpha(data, level_of_measurement=level_of_measurement)
     
-
+#
 
 # , usecols=fields ['L','Ind','CG','WG','OG','AnQ','SQ','WC','Prd','SP','T/Q','W','O','Lec','RtW','FUp','PQ','CQ','AnQ','MG','1o1','D/V','Adm','W','O']
 
