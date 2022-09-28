@@ -17,7 +17,7 @@ def SetWorkingDirectory():
 
 
 def ReadData():
-    # Loop through the files in the working directory and read excel sheets into a dataframe using specified columns
+    # oop through the files in the working directory and read excel sheets into a dataframe using specified columns
     field = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
     
     for file in os.listdir():
@@ -27,6 +27,8 @@ def ReadData():
             df = df.dropna()
             df.to_numpy()
             print(df)
+    #loop that creates multiple data frams for each file
+
 
 def krippendorff_alpha(data, level_of_measurement):
     return krippendorff.alpha(data, level_of_measurement=level_of_measurement)
