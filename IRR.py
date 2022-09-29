@@ -1,9 +1,10 @@
-from operator import index
+from ast import Num
 import pandas as pd
 import os
 import krippendorff
 import numpy as np
 import sys
+
 
 def SetWorkingDirectory():
     # Ask the user to set the working directory and save as char
@@ -14,22 +15,18 @@ def SetWorkingDirectory():
 
 def ReadData():
     num = int(input("Please enter the number of judges: "))
-    print(num)
+    print("number of judges entered",num)
+    np_array1, np_array2, np_array3, np_array4, np_array5, np_array6, np_array7, np_array8, np_array9, np_array10, np_array11, np_array12, np_array13, np_array14, np_array15 = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     if num >= 1:
         # create data frame from excel sheet
         df1 = pd.read_excel("1.xlsx", sheet_name="RawData")
         np_array1 = df1.to_numpy()
-    
-    print(np_array1)
-    # print(df1)
 
     if num >= 2:
         # create data frame from excel sheet
         df2 = pd.read_excel("2.xlsx", sheet_name="RawData")
         np_array2 = df2.to_numpy()
-
-       # print(np_array2)
 
     if num >= 3:
         # create data frame from excel sheet
@@ -97,7 +94,19 @@ def ReadData():
         np_array15 = df15.to_numpy()
         print(df15)
 
-   
+    krippendorff_alpha(num, np_array1, np_array2, np_array3, np_array4, np_array5, np_array6, np_array7, np_array8, np_array9, np_array10, np_array11, np_array12, np_array13, np_array14, np_array15)
+
+
+def krippendorff_alpha(num, np_array1, np_array2, np_array3, np_array4, np_array5, np_array6, np_array7, np_array8, np_array9, np_array10, np_array11, np_array12, np_array13, np_array14, np_array15):
+
+    print(num)
+    print(np_array1)
+    print("np_array2 should be zero: ")
+    print(np_array2)
+    print("this is a end of array")
+   # print (np_array2)
+    print("Krippendorff's alpha: ")
+
 
 def main():
     SetWorkingDirectory()
