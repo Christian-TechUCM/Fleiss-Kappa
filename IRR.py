@@ -15,7 +15,7 @@ def SetWorkingDirectory():
 
 def ReadData():
     num = int(input("Please enter the number of judges: "))
-    print("number of judges entered",num)
+    print("number of judges entered", num)
     np_array1, np_array2, np_array3, np_array4, np_array5, np_array6, np_array7, np_array8, np_array9, np_array10, np_array11, np_array12, np_array13, np_array14, np_array15 = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     if num >= 1:
@@ -94,11 +94,12 @@ def ReadData():
         np_array15 = df15.to_numpy()
         print(df15)
 
-    krippendorff_alpha(num, np_array1, np_array2, np_array3, np_array4, np_array5, np_array6, np_array7, np_array8, np_array9, np_array10, np_array11, np_array12, np_array13, np_array14, np_array15)
+    krippendorff_alpha(num, np_array1, np_array2, np_array3, np_array4, np_array5, np_array6, np_array7,
+                       np_array8, np_array9, np_array10, np_array11, np_array12, np_array13, np_array14, np_array15)
 
 
 def krippendorff_alpha(num, np_array1, np_array2, np_array3, np_array4, np_array5, np_array6, np_array7, np_array8, np_array9, np_array10, np_array11, np_array12, np_array13, np_array14, np_array15):
-
+    
     print(num)
     print(np_array1)
     print("np_array2 should be zero: ")
@@ -107,11 +108,16 @@ def krippendorff_alpha(num, np_array1, np_array2, np_array3, np_array4, np_array
    # print (np_array2)
     print("Krippendorff's alpha: ")
 
+    value_counts=np_array1
+
+    print("Krippendorff's alpha for nominal metric: ", krippendorff.alpha(value_counts=value_counts,
+                                                                          level_of_measurement="nominal"))
+    print("Krippendorff's alpha for interval metric: ", krippendorff.alpha(value_counts=value_counts))
+    
+
 
 def main():
     SetWorkingDirectory()
     ReadData()
-
-
 if __name__ == "__main__":
     main()
