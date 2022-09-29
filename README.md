@@ -10,3 +10,4 @@ Krippendorff's alpha (α) is a reliability coefficient developed to measure the 
 More information about Krippendorff's alpha can be found here.
 
 https://en.wikipedia.org/wiki/Krippendorff%27s_alpha
+![image](https://user-images.githubusercontent.com/74273298/192932212-3a9be3a4-e4e3-4808-a62e-7efe429bc1b3.png)
