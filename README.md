@@ -1,13 +1,13 @@
 #Inter Rater Reliability Calculator for
-Classroom Observation Protocol for Undergraduate STEM 
+Classroom Observation Protocol for Undergraduate STEM & Lab Observation Protocol for Undergraduate STEM.
 
-This Program is meant to calculate the IRR of student researchers who will be observing instructors with the use of COPUS. 
+This Program is meant to calculate the IRR of student researchers who will be observing instructors with the use of COPUS & LOPUS. 
 
-The program will use Krippendorff's alpha (α).
+The program will use Fleiss Kappa.
 
-Krippendorff's alpha (α) is a reliability coefficient developed to measure the agreement among observers, coders, judges, raters, or measuring instruments drawing distinctions among typically unstructured phenomena or assign computable values to them.
+Fleiss' kappa (named after Joseph L. Fleiss) is a statistical measure for assessing the reliability of agreement between a fixed number of raters when assigning categorical ratings to a number of items or classifying items. This contrasts with other kappas such as Cohen's kappa, which only work when assessing the agreement between not more than two raters or the intra-rater reliability (for one appraiser versus themself). The measure calculates the degree of agreement in classification over that which would be expected by chance.
 
-More information about Krippendorff's alpha can be found here.
+Fleiss' kappa can be used with binary or nominal-scale. It can also be applied to Ordinal data (ranked data): the MiniTab online documentation [1] gives an example. However, this document notes: "When you have ordinal ratings, such as defect severity ratings on a scale of 1–5, Kendall's coefficients, which account for ordering, are usually more appropriate statistics to determine association than kappa alone." Keep in mind however, that Kendall rank coefficients are only appropriate for rank data.
 
-https://en.wikipedia.org/wiki/Krippendorff%27s_alpha
-![image](https://user-images.githubusercontent.com/74273298/192932212-3a9be3a4-e4e3-4808-a62e-7efe429bc1b3.png)
+More can be found here
+https://en.wikipedia.org/wiki/Fleiss%27_kappa#:~:text=Fleiss%27%20kappa%20(named%20after%20Joseph,of%20items%20or%20classifying%20items.
