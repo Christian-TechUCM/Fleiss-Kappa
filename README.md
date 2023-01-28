@@ -43,7 +43,12 @@ https://en.wikipedia.org/wiki/Fleiss%27_kappa#:~:text=Fleiss%27%20kappa%20(named
 
 ## How to run on MAC OS: 
 
+App Download
+[Mac Download](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/MacOS/dist/Fleiss'Kappa.zip)
+
+When you first try to open the app you will be prompted with this message. To get around this open settings, then open "Privacy & Security", Lastly click "Open Anyway"
 ![Instruction1](Fleiss'kappa/Assests/ScreenShots/Mac/1.png)
+
 ![Instruction2](Fleiss'kappa/Assests/ScreenShots/Mac/2.png)
 ![Instruction3](Fleiss'kappa/Assests/ScreenShots/Mac/3.png)
 ![Instruction4](Fleiss'kappa/Assests/ScreenShots/Mac/4.png)
@@ -51,5 +56,9 @@ https://en.wikipedia.org/wiki/Fleiss%27_kappa#:~:text=Fleiss%27%20kappa%20(named
 
 
 ## How to run on Windows: 
+
+App Download
+[Windows Download](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/Windows/output/Fleiss'Kappa.exe)
+
 ![Instruction1](Fleiss'kappa/Assests/ScreenShots/Win/1.png)
 ![Instruction2](Fleiss'kappa/Assests/ScreenShots/Win/2.png)
