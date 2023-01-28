@@ -10,7 +10,7 @@ This code is a Python script that calculates Fleiss Kappa, a statistical measure
 - The program should then automatically calculate Fleiss Kappa and display it in the window.
 
 ## Windows and Mac Installation instruction:
-[Go to Heading section](#-How-to-run-on-Windows:)
+[Go to Heading section](##-How-to-run-on-Windows:)
 
 ## Dependencies
 - base64
