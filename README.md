@@ -9,6 +9,17 @@ This code is a Python script that calculates Fleiss Kappa, a statistical measure
 - Make sure the sheet inside the excel sheet is called 'RawData'.
 - The program should then automatically calculate Fleiss Kappa and display it in the window.
 
+## Formatting the Excel Sheet
+
+## GUI:
+The Gui provides instructions on what types of files are accepted and how to use it. 
+Here is a test file for the program:
+
+[TestFile](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/TestSheet.xlsx)
+
+Once this file is selected the user should see a screen like this
+
+
 ## Windows and Mac Installation instruction:
 [Mac Installation](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
 
@@ -48,7 +59,7 @@ Mac Download
 
 When you first try to open the app you will be prompted with this message. 
 ![Instruction1](Fleiss'kappa/Assests/ScreenShots/Mac/1.png)
- To get around this open settings, then open "Privacy & Security", Lastly click "Open Anyway".
+  To get around this open settings, then open "Privacy & Security", Lastly click "Open Anyway".
 ![Instruction2](Fleiss'kappa/Assests/ScreenShots/Mac/2.png)
 Click on "Use Password".
 ![Instruction3](Fleiss'kappa/Assests/ScreenShots/Mac/3.png)
