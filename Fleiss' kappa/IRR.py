@@ -1,7 +1,7 @@
 import openpyxl
 
 # Open the Excel workbook and select the active sheet
-wb = openpyxl.load_workbook('IRR.xlsx')
+wb = openpyxl.load_workbook('/home/christian/Documents/Code/IRR/LOPUS2/IRR.xlsx')
 sheet = wb.get_sheet_by_name('Test')
 
 # Read the data from the sheet into a 2D list
