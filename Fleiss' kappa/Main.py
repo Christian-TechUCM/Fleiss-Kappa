@@ -10,6 +10,14 @@ import matplotlib.pyplot as plt
 def open_website():
     webbrowser.open("https://www.Christianurbina.com")
 
+
+def open_wiki():
+    webbrowser.open("https://en.wikipedia.org/wiki/Fleiss%27_kappa")
+
+def open_github():
+    webbrowser.open("https://github.com/Christian-TechUCM/IRR")
+
+
 def delete_empty_rows(data):
     new_data = []
     for row in data:
@@ -91,7 +99,6 @@ root.geometry("800x400+200+200")
 root.title("Fleiss Kappa Calculation")
 
 
-
 # Create a Text widget that will be used to display instructions
 instructions = tk.Text(root, wrap=tk.WORD, height=20, width=55)
 instructions.pack(side='right', padx=20, pady=20)
@@ -102,15 +109,23 @@ instructions.insert(
 instructions.config(state="disabled")
 instructions.pack()
 
-#Selcect File Button
+# Selcect File Button
 select_file_button = tk.Button(
     root, text="Select File", command=on_select_file_button_click)
 select_file_button.pack()
 
-#Contact Developer Button
-website_button = tk.Button(root, text="Contact Developer", command=open_website)
+
+# Contact Developer Button
+website_button = tk.Button(root, text="Contact Developer ", command=open_website)
 website_button.pack(side="bottom", anchor="w")
 
+# GitHub Button
+GitHub = tk.Button(root, text="         GitHub         ", command=open_github)
+GitHub.pack(side="bottom", anchor="w")
+
+#wiki button
+Wiki = tk.Button(root, text="Fleiss' Kappa WIKI", command=open_wiki)
+Wiki.pack(side="bottom", anchor="w")
 
 
 result = tk.StringVar()
