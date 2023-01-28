@@ -1,5 +1,11 @@
 import base64
-
+import openpyxl
+import webbrowser
+import tkinter as tk
+from tkinter import filedialog
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import matplotlib.pyplot as plt
 
 instruction = """Instructions:
 
@@ -17,14 +23,6 @@ Note this is the scoring convention for Fleiss' Kappa
 0.81 - 1.00	Almost perfect agreement"""
 
 your_code = base64.b64encode(b"""
-
-import openpyxl
-import webbrowser
-import tkinter as tk
-from tkinter import filedialog
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-import matplotlib.pyplot as plt
 
 
 def open_website():
@@ -105,6 +103,7 @@ def process_file():
 # Create a Figure and a set of subplots
     fig, ax = plt.subplots(figsize=(5, 3))
     ax.bar(["Fleiss Kappa"], [kappa])
+    ax.set_ylim(0, 1)
     ax.set_ylabel("Value")
     ax.set_title("Fleiss Kappa")
 
