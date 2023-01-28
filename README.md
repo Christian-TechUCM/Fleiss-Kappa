@@ -46,11 +46,13 @@ https://en.wikipedia.org/wiki/Fleiss%27_kappa#:~:text=Fleiss%27%20kappa%20(named
 App Download
 [Mac Download](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/MacOS/dist/Fleiss'Kappa.zip)
 
-When you first try to open the app you will be prompted with this message. To get around this open settings, then open "Privacy & Security", Lastly click "Open Anyway"
+When you first try to open the app you will be prompted with this message. 
 ![Instruction1](Fleiss'kappa/Assests/ScreenShots/Mac/1.png)
-
+To get around this open settings, then open "Privacy & Security", Lastly click "Open Anyway".
 ![Instruction2](Fleiss'kappa/Assests/ScreenShots/Mac/2.png)
+Click on "Use Password".
 ![Instruction3](Fleiss'kappa/Assests/ScreenShots/Mac/3.png)
+Enter your credentials and the application should now open.
 ![Instruction4](Fleiss'kappa/Assests/ScreenShots/Mac/4.png)
 
 
