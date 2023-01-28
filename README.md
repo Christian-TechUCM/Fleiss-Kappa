@@ -1,13 +1,44 @@
-#Inter Rater Reliability Calculator for
-Classroom Observation Protocol for Undergraduate STEM & Lab Observation Protocol for Undergraduate STEM.
 
-This Program is meant to calculate the IRR of student researchers who will be observing instructors with the use of COPUS & LOPUS. 
+## Fleiss Kappa Calculator
 
-The program will use Fleiss Kappa.
+# README
 
-Fleiss' kappa (named after Joseph L. Fleiss) is a statistical measure for assessing the reliability of agreement between a fixed number of raters when assigning categorical ratings to a number of items or classifying items. This contrasts with other kappas such as Cohen's kappa, which only work when assessing the agreement between not more than two raters or the intra-rater reliability (for one appraiser versus themself). The measure calculates the degree of agreement in classification over that which would be expected by chance.
+## Description
+This code is a Python script that calculates Fleiss Kappa, a statistical measure of inter-rater agreement, on data from an Excel file.
 
-Fleiss' kappa can be used with binary or nominal-scale. It can also be applied to Ordinal data (ranked data): the MiniTab online documentation [1] gives an example. However, this document notes: "When you have ordinal ratings, such as defect severity ratings on a scale of 1–5, Kendall's coefficients, which account for ordering, are usually more appropriate statistics to determine association than kappa alone." Keep in mind however, that Kendall rank coefficients are only appropriate for rank data.
+## Instructions
+- Click the 'Select File' button to choose an Excel file. Note only .xlsx,.xlsm,.xltx,.xltm are accepted.
+- Make sure the sheet inside the excel sheet is called 'RawData'.
+- The program should then automatically calculate Fleiss Kappa and display it in the window.
 
-More can be found here
+## Dependencies
+- base64
+- openpyxl
+- webbrowser
+- tkinter
+- matplotlib
+
+## Scoring Convention for Fleiss Kappa
+- < 0 Poor agreement
+- 0.01 - 0.20 Slight agreement
+- 0.21 - 0.40 Fair agreement
+- 0.41 - 0.60 Moderate agreement
+- 0.61 - 0.80 Substantial agreement
+- 0.81 - 1.00 Almost perfect agreement
+
+## Additional Features
+- The code has a button that opens the developer's website
+- The code has a button that opens the Wikipedia page on Fleiss Kappa
+- The code has a button that opens the Github page of the developer
+
+## Note
+The code was created by Christian Urbina and the knowledge cut off is 2021-09.
+
+
+
+### Fleiss Kappa
+
+Fleiss' kappa is a statistical measure for assessing the reliability of agreement between multiple raters when assigning categorical ratings to items. It compares the degree of agreement to what would be expected by chance. It can be used with binary or nominal-scale data, and can also be applied to ordinal data, but it is important to note that other measures such as Kendall's coefficients may be more appropriate for ordinal data. More information can be found on the Wikipedia page.
+
+More information can be found here
 https://en.wikipedia.org/wiki/Fleiss%27_kappa#:~:text=Fleiss%27%20kappa%20(named%20after%20Joseph,of%20items%20or%20classifying%20items.
