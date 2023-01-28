@@ -10,8 +10,9 @@ This code is a Python script that calculates Fleiss Kappa, a statistical measure
 - The program should then automatically calculate Fleiss Kappa and display it in the window.
 
 ## Windows and Mac Installation instruction:
-[Go to Heading section](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
+[Mac Installation](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
 
+[Windows Installation](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
 ## Dependencies
 - base64
 - openpyxl
