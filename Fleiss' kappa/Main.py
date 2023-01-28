@@ -1,3 +1,23 @@
+import base64
+
+
+instruction = """Instructions:
+
+1. Click the 'Select File' button to choose an Excel file. Note only .xlsx,.xlsm,.xltx,.xltm are accepted.
+2. Make sure the sheet inside the excel sheet is called 'RawData'.
+3. The program should then automatically calculate Fleiss Kappa and display it in the window.
+
+Note this is the scoring convention for Fleiss' Kappa
+
+< 0	    Poor agreement 
+0.01 - 0.20	Slight agreement
+0.21 - 0.40	Fair agreement
+0.41 - 0.60	Moderate agreement
+0.61 - 0.80	Substantial agreement
+0.81 - 1.00	Almost perfect agreement"""
+
+your_code = base64.b64encode(b"""
+
 import openpyxl
 import webbrowser
 import tkinter as tk
@@ -105,9 +125,11 @@ instructions.pack(side='right', padx=20, pady=20)
 
 # Insert instructions into the Text widget
 instructions.insert(
-    tk.END, "Instructions:\n\n1.Click the 'Select File' button to choose an Excel file. Note only .xlsx,.xlsm,.xltx,.xltm are accepted. \n2. Make sure the sheet inside the excel sheet is called 'RawData'. \n3. The program should then automatically calculate Fleiss Kappa and display it in the window. \n \n Note this is the scoring convention for Fleiss' Kappa \n < 0	     Poor agreement \n 0.01 - 0.20	Slight agreement \n 0.21 - 0.40	Fair agreement \n 0.41 - 0.60	Moderate agreement \n 0.61 - 0.80	Substantial agreement \n 0.81 - 1.00	Almost perfect agreement")
+    tk.END, instruction)
+
 instructions.config(state="disabled")
 instructions.pack()
+
 
 # Selcect File Button
 select_file_button = tk.Button(
@@ -131,3 +153,7 @@ Wiki.pack(side="bottom", anchor="w")
 result = tk.StringVar()
 label = tk.Label(root, textvariable=result)
 root.mainloop()
+
+""")
+
+exec(base64.b64decode(your_code))
