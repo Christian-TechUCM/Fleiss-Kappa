@@ -3,6 +3,9 @@ import webbrowser
 import tkinter as tk
 from tkinter import filedialog
 import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import matplotlib.pyplot as plt
+
 
 def open_website():
     webbrowser.open("https://www.Christianurbina.com")
@@ -71,9 +74,20 @@ def process_file():
     result.set(f'Fleiss kappa: {kappa:.3f}')
     label.pack()
 
+# Create a Figure and a set of subplots
+    fig, ax = plt.subplots(figsize=(5, 3))
+    ax.bar(["Fleiss Kappa"], [kappa])
+    ax.set_ylabel("Value")
+    ax.set_title("Fleiss Kappa")
+
+    # Embed the bar graph in the Tkinter window
+    canvas = FigureCanvasTkAgg(fig, root)
+    canvas.get_tk_widget().pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+    canvas.draw()
+
 
 root = tk.Tk()
-root.geometry("600x400+200+200")
+root.geometry("800x400+200+200")
 root.title("Fleiss Kappa Calculation")
 
 
@@ -84,7 +98,7 @@ instructions.pack(side='right', padx=20, pady=20)
 
 # Insert instructions into the Text widget
 instructions.insert(
-    tk.END, "Instructions:\n\n1. Click the 'Select File' button to choose an Excel file. Note only .xlsx,.xlsm,.xltx,.xltm are accepted. \n2. Make sure the sheet inside the excel sheet is called 'RawData'. \n3. The program should then automatically calculat Fleiss Kappa and display it in the window")
+    tk.END, "Instructions:\n\n1.Click the 'Select File' button to choose an Excel file. Note only .xlsx,.xlsm,.xltx,.xltm are accepted. \n2. Make sure the sheet inside the excel sheet is called 'RawData'. \n3. The program should then automatically calculate Fleiss Kappa and display it in the window. \n \n Note this is the scoring convention for Fleiss' Kappa \n < 0	     Poor agreement \n 0.01 - 0.20	Slight agreement \n 0.21 - 0.40	Fair agreement \n 0.41 - 0.60	Moderate agreement \n 0.61 - 0.80	Substantial agreement \n 0.81 - 1.00	Almost perfect agreement")
 instructions.config(state="disabled")
 instructions.pack()
 
@@ -96,6 +110,8 @@ select_file_button.pack()
 #Contact Developer Button
 website_button = tk.Button(root, text="Contact Developer", command=open_website)
 website_button.pack(side="bottom", anchor="w")
+
+
 
 result = tk.StringVar()
 label = tk.Label(root, textvariable=result)
