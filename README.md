@@ -39,7 +39,7 @@ https://en.wikipedia.org/wiki/Fleiss%27_kappa#:~:text=Fleiss%27%20kappa%20(named
 
 ## How to run on MAC OS: 
 
-![Instruction1](Fleiss-Kappa/Fleiss'kappa/Assests/ScreenShots/Mac/1.png)
+![Instruction1](Fleiss'kappa/Assests/ScreenShots/Mac/1.png)
 ![Instruction2](Fleiss-Kappa/Fleiss'kappa/Assests/ScreenShots/Mac/2.png)
 ![Instruction3](Fleiss-Kappa/Fleiss'kappa/Assests/ScreenShots/Mac/3.png)
 ![Instruction4](Fleiss-Kappa/Fleiss'kappa/Assests/ScreenShots/Mac/4.png)
