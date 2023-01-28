@@ -1,5 +1,7 @@
 #ReadMe
 
+This code is a Python script that calculates Fleiss Kappa, a statistical measure of inter-rater agreement, on data from an Excel file.
+
 ## Fleiss Kappa Calculator
 
 A program to calculate Fleiss Kappa from an excel file.
@@ -17,6 +19,14 @@ Note this is the scoring convention for Fleiss' Kappa
 0.41 - 0.60	Moderate agreement
 0.61 - 0.80	Substantial agreement
 0.81 - 1.00	Almost perfect agreement
+
+### Dependdencies:
+base64
+openpyxl
+webbrowser
+tkinter
+matplotlib
+
 
 ### Fleiss Kappa
 
