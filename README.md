@@ -66,7 +66,7 @@ Note The categories are presented in the columns, while the subjects are present
 
 Fleiss' kappa is a statistical measure for assessing the reliability of agreement between multiple raters when assigning categorical ratings to items. It compares the degree of agreement to what would be expected by chance. It can be used with binary or nominal-scale data, and can also be applied to ordinal data, but it is important to note that other measures such as Kendall's coefficients may be more appropriate for ordinal data. More information can be found on the Wikipedia page.
 
-More information can be found [Here](https://en.wikipedia.org/wiki/Fleiss%27_kappa#:~:text=Fleiss%27%20kappa%20(named%20after%20Joseph,of%20items%20or%20classifying%20items).
+More information can be found [Here](https://en.wikipedia.org/wiki/Fleiss%27_kappa)
 
 ## How to run on MAC OS:
 
