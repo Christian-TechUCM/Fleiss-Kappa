@@ -141,11 +141,11 @@ website_button = tk.Button(root, text="Contact Developer ", command=open_website
 website_button.pack(side="bottom", anchor="w")
 
 # GitHub Button
-GitHub = tk.Button(root, text="          GitHub           ", command=open_github)
+GitHub = tk.Button(root, text="         GitHub         ", command=open_github)
 GitHub.pack(side="bottom", anchor="w")
 
 #wiki button
-Wiki = tk.Button(root, text="Fleiss' Kappa WIKI   ", command=open_wiki)
+Wiki = tk.Button(root, text="Fleiss' Kappa WIKI  ", command=open_wiki)
 Wiki.pack(side="bottom", anchor="w")
 
 
