@@ -27,6 +27,8 @@ Once this file is selected the user should see a screen like this.
 
 ![Gui2](Fleiss'kappa/Assests/ScreenShots/App/2.png)
 
+The Program Calculates the percentage and prints out a graph.
+
 ## Formatting the Excel Sheet
 When Creating the excel sheet the sheet name must be "Raw Data"
 From there we can input data from the sheet.
