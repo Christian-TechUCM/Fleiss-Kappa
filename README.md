@@ -13,6 +13,7 @@ This code is a Python script that calculates Fleiss Kappa, a statistical measure
 
 ## Windows and Mac Installation instruction:
 [Mac Installation](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
+[Windows Installation](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
 
 ## GUI:
 The Gui provides instructions on what types of files are accepted and how to use it. 
@@ -32,7 +33,7 @@ Note The categories are presented in the columns, while the subjects are present
 
 ![Sheet](Fleiss'kappa/Assests/TestFiles/Sheet.png)
 
-[Windows Installation](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
+
 ## Dependencies
 - base64
 - openpyxl
