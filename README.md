@@ -9,7 +9,7 @@ This code is a Python script that calculates Fleiss Kappa, a statistical measure
 
 -[Windows and Mac Installation instruction:](https://github.com/Christian-TechUCM/Fleiss-Kappa#windows-and-mac-installation-instruction)
 
--[Gui](https://github.com/Christian-TechUCM/Fleiss-Kappa#gui)
+-[GUI](https://github.com/Christian-TechUCM/Fleiss-Kappa#gui)
 
 -[Formatting the Excel Sheet](https://github.com/Christian-TechUCM/Fleiss-Kappa#formatting-the-excel-sheet)
 
