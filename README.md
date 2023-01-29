@@ -16,7 +16,7 @@ This code is a Python script that calculates Fleiss Kappa, a statistical measure
 
 -[Windows Installation](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
 
-If you would like to run this program in the terminal Make sure to install the [dependencies](https://github.com/Christian-TechUCM/Fleiss-Kappa#dependencies). The Main py file can be found [Here](Fleiss'kappa/Windows/Main.py)
+If you would like to run this program in the terminal Make sure to install the [dependencies](https://github.com/Christian-TechUCM/Fleiss-Kappa#dependencies). The Main py file can be found [here.](Fleiss'kappa/Windows/Main.py)
 
 ## GUI:
 
@@ -66,7 +66,7 @@ Note The categories are presented in the columns, while the subjects are present
 
 Fleiss' kappa is a statistical measure for assessing the reliability of agreement between multiple raters when assigning categorical ratings to items. It compares the degree of agreement to what would be expected by chance. It can be used with binary or nominal-scale data, and can also be applied to ordinal data, but it is important to note that other measures such as Kendall's coefficients may be more appropriate for ordinal data. More information can be found on the Wikipedia page.
 
-More information can be found [here](https://en.wikipedia.org/wiki/Fleiss%27_kappa).
+More information can be found [here.](https://en.wikipedia.org/wiki/Fleiss%27_kappa)
 
 ## How to run on MAC OS:
 
