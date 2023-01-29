@@ -4,6 +4,20 @@
 
 This code is a Python script that calculates Fleiss Kappa, a statistical measure of inter-rater agreement, on data from an Excel file.
 
+## Table Of Contents:
+-[Instructions](https://github.com/Christian-TechUCM/Fleiss-Kappa#instructions)
+-[Windows and Mac Installation instruction:](https://github.com/Christian-TechUCM/Fleiss-Kappa#windows-and-mac-installation-instruction)
+-[Gui](https://github.com/Christian-TechUCM/Fleiss-Kappa#gui)
+-[Formatting the Excel Sheet](https://github.com/Christian-TechUCM/Fleiss-Kappa#formatting-the-excel-sheet)
+-[Dependencies](https://github.com/Christian-TechUCM/Fleiss-Kappa#dependencies)
+-[Scoring Convention for Fleiss Kappa](https://github.com/Christian-TechUCM/Fleiss-Kappa#scoring-convention-for-fleiss-kappa)
+-[Additonal Features](https://github.com/Christian-TechUCM/Fleiss-Kappa#additional-features)
+-[Fleiss Kappa](https://github.com/Christian-TechUCM/Fleiss-Kappa#fleiss-kappa)
+-[How to run on MAC OS:](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
+-[How to run on Windows:](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-windows)
+-
+
+
 ## Instructions
 
 - Click the 'Select File' button to choose an Excel file. Note only .xlsx,.xlsm,.xltx,.xltm are accepted.
