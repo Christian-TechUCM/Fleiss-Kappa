@@ -4,7 +4,7 @@
 
 This code is a Python script that calculates Fleiss Kappa, a statistical measure of inter-rater agreement, on data from an Excel file.
 
-# Table Of Contents:
+## Table Of Contents:
 -[Instructions](https://github.com/Christian-TechUCM/Fleiss-Kappa#instructions)
 
 -[Windows and Mac Installation instruction:](https://github.com/Christian-TechUCM/Fleiss-Kappa#windows-and-mac-installation-instruction)
