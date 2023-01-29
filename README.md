@@ -24,7 +24,8 @@ This code is a Python script that calculates Fleiss Kappa, a statistical measure
 -[How to run on MAC OS:](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
 
 -[How to run on Windows:](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-windows)
--
+
+
 
 
 ## Instructions
