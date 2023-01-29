@@ -16,6 +16,8 @@ This code is a Python script that calculates Fleiss Kappa, a statistical measure
 
 -[Windows Installation](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
 
+If you would like to run this program in the terminal Make sure to install the [dependencies](https://github.com/Christian-TechUCM/Fleiss-Kappa#dependencies). The Main py file can be found [Here](Fleiss'kappa/Windows/Main.py)
+
 ## GUI:
 
 The Gui provides instructions on what types of files are accepted and how to use it.
