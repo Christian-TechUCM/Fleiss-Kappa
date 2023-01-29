@@ -15,10 +15,13 @@ This code is a Python script that calculates Fleiss Kappa, a statistical measure
 The Gui provides instructions on what types of files are accepted and how to use it. 
 Here is a test file for the program:
 
-[TestFile](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/TestSheet.xlsx)
+![Gui1](Fleiss'kappa/Assests/ScreenShots/App/1.png)
 
-Once this file is selected the user should see a screen like this
+[TestFile](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/Assests/TestFiles/TestSheet.xlsx)
 
+Once this file is selected the user should see a screen like this.
+
+![Gui2](Fleiss'kappa/Assests/ScreenShots/App/2.png)
 
 ## Windows and Mac Installation instruction:
 [Mac Installation](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-mac-os)
