@@ -94,7 +94,6 @@ Note The categories are presented in the columns, while the subjects are present
 
 ## How to run on MAC OS:
 
-Mac Download
 [Mac Download](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/MacOS/dist/Fleiss'Kappa.zip)
 
 When you first try to open the app you will be prompted with this message.
@@ -108,7 +107,6 @@ Enter your credentials and the application should now be able to open the app.
 
 ## How to run on Windows:
 
-Windows Download
 [Windows Download](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/Windows/output/Fleiss'Kappa.exe)
 
 When You try to open the app on windows you will be promted with this message.
