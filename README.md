@@ -52,7 +52,7 @@ If you would like to run this program in the terminal Make sure to install the [
 ## GUI:
 
 The Gui provides instructions on what types of files are accepted and how to use it.
-Here is a test file for the program: [TestFile](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/Assests/TestFiles/TestSheet.xlsx). These numbers are from the example on the WIKI.
+Here is a test file for the program: [TestFile](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/Assets/TestFiles/TestSheet.xlsx). These numbers are from the example on the WIKI.
 
 ### Instructions
 
@@ -60,11 +60,11 @@ Here is a test file for the program: [TestFile](https://github.com/Christian-Tec
 - Make sure the sheet inside the excel sheet is called 'RawData'.
 - The program should then automatically calculate Fleiss Kappa and display it in the window.
 
-![Gui1](Fleiss'kappa/Assests/ScreenShots/App/1.png)
+![Gui1](Fleiss'kappa/Assets/ScreenShots/App/1.png)
 
 Once this file is selected the user should see a screen like this.
 
-![Gui2](Fleiss'kappa/Assests/ScreenShots/App/2.png)
+![Gui2](Fleiss'kappa/Assets/ScreenShots/App/2.png)
 
 The Program Calculates the percentage and prints out a graph.
 
@@ -74,7 +74,7 @@ When Creating the excel sheet the sheet name must be "Raw Data"
 From there we can input data from the sheet.
 Note The categories are presented in the columns, while the subjects are presented in the rows.
 
-![Sheet](Fleiss'kappa/Assests/TestFiles/Sheet.png)
+![Sheet](Fleiss'kappa/Assets/TestFiles/Sheet.png)
 
 ## Dependencies
 
@@ -97,20 +97,20 @@ Note The categories are presented in the columns, while the subjects are present
 [Mac Download](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/MacOS/dist/Fleiss'Kappa.zip)
 
 When you first try to open the app you will be prompted with this message.
-![Instruction1](Fleiss'kappa/Assests/ScreenShots/Mac/1.png)
+![Instruction1](Fleiss'kappa/Assets/ScreenShots/Mac/1.png)
 To get around this open settings, then open "Privacy & Security", Lastly click "Open Anyway".
-![Instruction2](Fleiss'kappa/Assests/ScreenShots/Mac/2.png)
+![Instruction2](Fleiss'kappa/Assets/ScreenShots/Mac/2.png)
 Click on "Use Password".
-![Instruction3](Fleiss'kappa/Assests/ScreenShots/Mac/3.png)
+![Instruction3](Fleiss'kappa/Assets/ScreenShots/Mac/3.png)
 Enter your credentials and the application should now be able to open the app.
-![Instruction4](Fleiss'kappa/Assests/ScreenShots/Mac/4.png)
+![Instruction4](Fleiss'kappa/Assets/ScreenShots/Mac/4.png)
 
 ## How to run on Windows:
 
 [Windows Download](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/Windows/output/Fleiss'Kappa.exe)
 
 When You try to open the app on windows you will be promted with this message.
-![Instruction1](Fleiss'kappa/Assests/ScreenShots/Win/1.png)
+![Instruction1](Fleiss'kappa/Assets/ScreenShots/Win/1.png)
 
 To Bypass this click on "More Info" then click "Run anyway"
-![Instruction2](Fleiss'kappa/Assests/ScreenShots/Win/2.png)
+![Instruction2](Fleiss'kappa/Assets/ScreenShots/Win/2.png)
