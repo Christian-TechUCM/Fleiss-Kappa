@@ -1,13 +1,13 @@
-# Fleiss Kappa Calculator
+# Fleiss' Kappa Calculator
 
 ## Description
 
-This code is a Python script that calculates Fleiss Kappa, a statistical measure of inter-rater agreement, on data from an Excel file.
+This code is a Python script that calculates Fleiss' Kappa, a statistical measure of inter-rater agreement, on data from an Excel file.
 
 ## Table Of Contents:
--[Fleiss Kappa](https://github.com/Christian-TechUCM/Fleiss-Kappa#fleiss-kappa)
+-[Fleiss' Kappa](https://github.com/Christian-TechUCM/Fleiss-Kappa#fleiss-kappa)
 
--[Scoring Convention for Fleiss Kappa](https://github.com/Christian-TechUCM/Fleiss-Kappa#scoring-convention-for-fleiss-kappa)
+-[Scoring Convention for Fleiss' Kappa](https://github.com/Christian-TechUCM/Fleiss-Kappa#scoring-convention-for-fleiss-kappa)
 
 -[Windows and Mac Installation instruction:](https://github.com/Christian-TechUCM/Fleiss-Kappa#windows-and-mac-installation-instruction)
 
@@ -24,13 +24,13 @@ This code is a Python script that calculates Fleiss Kappa, a statistical measure
 -[How to run on Windows:](https://github.com/Christian-TechUCM/Fleiss-Kappa#how-to-run-on-windows)
 
 
-## Fleiss Kappa
+## Fleiss' Kappa
 
 Fleiss' kappa is a statistical measure for assessing the reliability of agreement between multiple raters when assigning categorical ratings to items. It compares the degree of agreement to what would be expected by chance. It can be used with binary or nominal-scale data, and can also be applied to ordinal data, but it is important to note that other measures such as Kendall's coefficients may be more appropriate for ordinal data. More information can be found on the Wikipedia page.
 
 More information can be found [here.](https://en.wikipedia.org/wiki/Fleiss%27_kappa)
 
-## Scoring Convention for Fleiss Kappa
+## Scoring Convention for Fleiss' Kappa
 
 - < 0 Poor agreement
 - 0.01 - 0.20 Slight agreement
@@ -88,7 +88,7 @@ Note The categories are presented in the columns, while the subjects are present
 ## Additional Features
 
 - The code has a button that opens the developer's website
-- The code has a button that opens the Wikipedia page on Fleiss Kappa
+- The code has a button that opens the Wikipedia page on Fleiss' Kappa
 - The code has a button that opens the Github page of the developer
 
 
