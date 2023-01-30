@@ -41,11 +41,7 @@ More information can be found [here.](https://en.wikipedia.org/wiki/Fleiss%27_ka
 - 0.61 - 0.80 Substantial agreement
 - 0.81 - 1.00 Almost perfect agreement
 
-## Instructions
 
-- Click the 'Select File' button to choose an Excel file. Note only .xlsx,.xlsm,.xltx,.xltm are accepted.
-- Make sure the sheet inside the excel sheet is called 'RawData'.
-- The program should then automatically calculate Fleiss Kappa and display it in the window.
 
 ## Windows and Mac Installation instruction:
 
@@ -59,6 +55,12 @@ If you would like to run this program in the terminal Make sure to install the [
 
 The Gui provides instructions on what types of files are accepted and how to use it.
 Here is a test file for the program: [TestFile](https://github.com/Christian-TechUCM/Fleiss-Kappa/raw/main/Fleiss'kappa/Assests/TestFiles/TestSheet.xlsx). These numbers are from the example on the WIKI.
+
+### Instructions
+
+- Click the 'Select File' button to choose an Excel file. Note only .xlsx,.xlsm,.xltx,.xltm are accepted.
+- Make sure the sheet inside the excel sheet is called 'RawData'.
+- The program should then automatically calculate Fleiss Kappa and display it in the window.
 
 ![Gui1](Fleiss'kappa/Assests/ScreenShots/App/1.png)
 
