@@ -6,6 +6,82 @@ from tkinter import filedialog
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
+
+def _normalise_cell(value):
+    """Return a numeric representation of a worksheet cell.
+
+    The Fleiss' kappa calculator only operates on numeric inputs.  The Excel
+    sheet that feeds the Windows application can, however, contain headers or
+    stray whitespace.  This helper trims out empty strings, converts values that
+    look like numbers into ``int``\ s and ``float``\ s, and leaves any
+    unexpected text untouched so that the caller can decide how to handle it.
+    """
+
+    if value is None:
+        return None
+
+    if isinstance(value, bool):
+        # Treat boolean cells as 0/1 votes.
+        return int(value)
+
+    if isinstance(value, (int, float)):
+        return int(value) if isinstance(value, float) and value.is_integer() else value
+
+    if isinstance(value, str):
+        stripped = value.strip()
+        if not stripped:
+            return None
+
+        try:
+            numeric = float(stripped)
+        except ValueError:
+            return stripped
+
+        return int(numeric) if numeric.is_integer() else numeric
+
+    return value
+
+
+def sanitise_rows(rows):
+    """Remove headers/blank rows and ensure we only keep numeric data."""
+
+    cleaned_rows = []
+    data_started = False
+
+    for row in rows:
+        numeric_row = []
+        found_text = False
+
+        for cell in row:
+            normalised = _normalise_cell(cell)
+
+            if normalised is None:
+                continue
+
+            if isinstance(normalised, str):
+                found_text = True
+                break
+
+            if normalised < 0:
+                raise ValueError("Ratings must be non-negative numbers.")
+
+            numeric_row.append(normalised)
+
+        if found_text:
+            if data_started:
+                raise ValueError(
+                    "Found text inside the data range. Please remove headers, comments, or notes from the 'RawData' sheet."
+                )
+
+            # Treat leading text rows as headers/instructions and skip them.
+            continue
+
+        if numeric_row:
+            data_started = True
+            cleaned_rows.append(numeric_row)
+
+    return cleaned_rows
+
 instruction = """Instructions:
 
 1. Click the 'Select File' button to choose an Excel file. Note only .xlsx,.xlsm,.xltx,.xltm are accepted.
@@ -111,12 +187,12 @@ def process_file():
         wb = openpyxl.load_workbook(file_path)
         sheet = wb['RawData']
 
-        data = []
+        raw_rows = []
         for row in sheet.iter_rows(values_only=True):
-            data_row = [cell for cell in row]
-            data.append(data_row)
+            raw_rows.append([cell for cell in row])
 
-        data = delete_empty_rows(data)
+        raw_rows = delete_empty_rows(raw_rows)
+        data = sanitise_rows(raw_rows)
 
         if not data:
             raise ValueError("No data found in worksheet 'RawData'.")
@@ -125,7 +201,18 @@ def process_file():
 
         num_subjects = len(counts_matrix)
         num_categories = len(categories)
-        num_raters = sum(counts_matrix[0]) if counts_matrix else 0
+
+        row_totals = [sum(row) for row in counts_matrix if sum(row) > 0]
+
+        if not row_totals:
+            raise ValueError("Each subject must have at least two ratings.")
+
+        if len(set(row_totals)) != 1:
+            raise ValueError(
+                "Each subject must be scored by the same number of raters. Please check for missing values in 'RawData'."
+            )
+
+        num_raters = row_totals[0]
 
         if num_raters <= 1:
             raise ValueError("At least two ratings per subject are required to compute Fleiss' Kappa.")
@@ -133,7 +220,7 @@ def process_file():
         # Calculate Fleiss' Kappa
         # Step 1: Compute p_j for each category j
         p_j = [0] * num_categories
-        total_ratings = num_subjects * num_raters
+        total_ratings = sum(row_totals)
 
         for row in counts_matrix:
             for j in range(num_categories):
@@ -150,6 +237,9 @@ def process_file():
 
             row_square_sum = sum([x ** 2 for x in row])
             P_i.append((row_square_sum - sum_row) / (sum_row * (sum_row - 1)))
+
+        if not P_i:
+            raise ValueError("Unable to compute Fleiss' Kappa because no subject has at least two ratings.")
 
         # Step 3: Compute P_bar (average observed agreement)
         P_bar = sum(P_i) / len(P_i)
