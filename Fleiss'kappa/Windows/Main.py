@@ -125,23 +125,74 @@ def delete_empty_rows(data):
     return new_data
 
 
-def convert_ratings_to_counts(data):
-    """Convert raw rater scores into per-category counts.
+def convert_ratings_to_counts(data, mode="auto"):
+    """Convert either raw ratings or an existing counts matrix into counts.
 
-    The Windows application was initially written to operate on a matrix where
-    each cell represented the *count* of ratings a subject received in a
-    category.  In practice, many users (including the reporter of this bug)
-    provide the raw ratings themselves.  This helper converts those raw ratings
-    into the required counts so that the Fleiss' Kappa calculation succeeds for
-    both input styles.
+    ``data`` is the sanitised worksheet payload where each row represents a
+    single subject.  The historical behaviour expects *raw ratings* (for
+    example ``[0, 1, 1, 3]``) and converts them into per-category tallies so
+    the Fleiss' Kappa computation can run.  Some users, however, already
+    provide an aggregated counts matrix (for example ``[0, 2, 1, 0]``).  This
+    helper supports both layouts.
+
+    Args:
+        data: Iterable of per-subject rows containing numeric entries.
+        mode: ``"auto"`` (default) attempts to infer the layout.  ``"ratings"``
+            forces the raw-rating conversion path and ``"counts"`` assumes the
+            input is already aggregated.
+
+    Returns:
+        A tuple ``(counts_matrix, categories)`` compatible with the remainder
+        of the calculator pipeline.
     """
+
+    if mode not in {"auto", "ratings", "counts"}:
+        raise ValueError("mode must be one of: 'auto', 'ratings', or 'counts'.")
+
+    if not data:
+        return [], []
+
+    def _looks_like_counts_matrix(rows):
+        lengths = {len(row) for row in rows}
+        if len(lengths) != 1:
+            return False
+
+        non_empty_totals = []
+
+        for row in rows:
+            for value in row:
+                if isinstance(value, float) and not value.is_integer():
+                    return False
+
+            total = sum(row)
+            if total > 0:
+                non_empty_totals.append(total)
+
+        if not non_empty_totals:
+            return False
+
+        return len(set(non_empty_totals)) == 1
+
+    treat_as_counts = mode == "counts"
+
+    if mode == "auto":
+        treat_as_counts = _looks_like_counts_matrix(data)
+    elif mode == "ratings":
+        treat_as_counts = False
+
+    if treat_as_counts:
+        num_categories = len(data[0])
+        categories = list(range(num_categories))
+        counts_matrix = [[int(value) for value in row] for row in data]
+        return counts_matrix, categories
 
     categories = []
     category_to_index = {}
 
-    # Discover the set of categories that appear in the data.  We keep the
-    # insertion order to provide stable output and to avoid sorting surprises
-    # when numeric strings are mixed with integers.
+    # Discover the set of categories that appear in the raw ratings. We keep
+    # the insertion order to provide stable output and to avoid sorting
+    # surprises when numeric strings are mixed with integers.
+
     for row in data:
         for value in row:
             if value is None:
